@@ -1,0 +1,15 @@
+Model or condition,Metric,Overall,Swap,Move,Rotate,Mirror,Delete,Detail
+Original responses,acc,24.0,66.67,10.0,11.11,13.33,16.67,23.53
+Original responses,ts,12.0,33.33,5.0,5.56,6.67,8.33,11.76
+Comparison strategy,acc,40.0,77.78,20.0,16.67,40.0,25.0,58.82
+Comparison strategy,ts,23.0,55.56,20.0,0.0,13.33,8.33,35.29
+Scene description,acc,37.0,72.22,20.0,22.22,33.33,25.0,47.06
+Scene description,ts,29.0,66.67,20.0,11.11,20.0,25.0,29.41
+Edit taxonomy,acc,44.0,72.22,30.0,16.67,66.67,66.67,23.53
+Edit taxonomy,ts,32.0,61.11,25.0,11.11,53.33,33.33,11.76
+Comparison + taxonomy,acc,48.0,77.78,25.0,22.22,66.67,75.0,35.29
+Comparison + taxonomy,ts,34.0,61.11,15.0,5.56,53.33,50.0,29.41
+3D reconstruction,acc,47.0,77.78,15.0,16.67,46.67,75.0,64.71
+3D reconstruction,ts,34.0,66.67,10.0,5.56,40.0,50.0,41.18
+Camera calibration,acc,61.0,66.67,70.0,38.89,40.0,75.0,76.47
+Camera calibration,ts,48.0,61.11,70.0,22.22,20.0,58.33,52.94

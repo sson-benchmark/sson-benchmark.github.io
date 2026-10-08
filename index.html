@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#68489c">
+  <title>SSoN | Same Space or Not</title>
+  <meta name="description" content="Same Space or Not is a benchmark of cross-view contradiction resolution with 1,000 questions, seven indoor scene sources and six controlled 3D edit categories.">
+  <link rel="canonical" href="https://sson-benchmark.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Same Space or Not">
+  <meta property="og:description" content="Four views. One contradiction. Benchmarking spatial intelligence through cross-view contradictions.">
+  <meta property="og:url" content="https://sson-benchmark.github.io/">
+  <meta property="og:image" content="https://sson-benchmark.github.io/assets/teaser.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="findings.css">
+  <link rel="stylesheet" href="motion.css">
+  <link rel="preload" as="image" href="assets/wings-white-gold.png">
+  <script src="site-config.js" defer></script>
+  <script src="site-data.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="findings.js" defer></script>
+  <script src="motion.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <div class="brand-family">
+        <div class="series-brand"><img src="assets/ai-vision-exam-logo.svg" alt="AI Vision Exam" width="1273" height="276"></div>
+        <a class="brand" href="#top" aria-label="SSoN home"><img src="assets/logo.png" alt="" width="44" height="36"><span>SSoN</span></a>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#explore">Explore</a><a href="#benchmark">Benchmark</a><a href="#results">Results</a><a href="#findings">Findings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="hero-backdrop">
+<div class="hero-ornaments" aria-hidden="true"><div class="wing-rail wing-rail-left"><div class="wing-mirror"><div class="wing-unfold"><svg class="wing-art" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 520">
+  <g><svg x="25" y="0" width="390" height="520" viewBox="0 0 768 1024" overflow="hidden">
+    <image href="assets/wings-white-gold.png" width="1536" height="1024" preserveAspectRatio="xMidYMid meet"/>
+  </svg></g>
+</svg>
+</div></div><span class="loose-feather feather-1"><img src="assets/feather.svg" alt="" width="58" height="132"></span><span class="loose-feather feather-2"><img src="assets/feather.svg" alt="" width="58" height="132"></span></div><div class="wing-rail wing-rail-right"><div class="wing-mirror"><div class="wing-unfold"><svg class="wing-art" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 520">
+  <g transform="translate(440 0) scale(-1 1)"><svg x="25" y="0" width="390" height="520" viewBox="768 0 768 1024" overflow="hidden">
+    <image href="assets/wings-white-gold.png" width="1536" height="1024" preserveAspectRatio="xMidYMid meet"/>
+  </svg></g>
+</svg>
+</div></div><span class="loose-feather feather-1"><img src="assets/feather.svg" alt="" width="58" height="132"></span><span class="loose-feather feather-2"><img src="assets/feather.svg" alt="" width="58" height="132"></span></div></div>
+    <section class="hero wrap" id="top" aria-labelledby="paper-title">
+      <img class="hero-logo" src="assets/logo.png" alt="SSoN logo" width="112" height="92">
+      <p class="eyebrow">A benchmark for spatial intelligence</p>
+      <h1 id="paper-title">Same Space or Not</h1>
+      <p class="paper-subtitle">Benchmarking Spatial Intelligence<br class="desktop-break"> Through Cross-View Contradictions</p>
+      <div class="authors" aria-label="Authors">
+        <span>Huizi Cao<sup>1</sup></span><span>Guanyu Xu<sup>2</sup></span><span>Zhixuan Liang<sup>3</sup></span><span>Ming Yin<sup>3</sup></span><span>Jiuxiang Gu<sup>4</sup></span><span>Manling Li<sup>5</sup></span><span>Mengdi Wang<sup>3</sup></span><span>Shilong Liu<sup>3</sup></span>
+      </div>
+      <div class="affiliations" aria-label="Affiliations">
+        <span><sup>1</sup>Carleton College</span><span><sup>2</sup>University of Pennsylvania</span><span><sup>3</sup>Princeton University</span><span><sup>4</sup>Adobe Systems</span><span><sup>5</sup>Northwestern University</span>
+      </div>
+      <div class="resource-buttons" id="resources" aria-label="Research resources">
+        <a class="button resource-link" data-resource="paper" aria-disabled="true"><span class="button-symbol" aria-hidden="true">↗</span> Paper <small class="release-status">Coming soon</small></a>
+        <a class="button resource-link" data-resource="dataset" href="https://huggingface.co/datasets/HuiziCao/SSoN" target="_blank" rel="noopener" aria-disabled="false"><span class="button-symbol" aria-hidden="true">▦</span> Dataset</a>
+        <a class="button resource-link" data-resource="checkpoints" href="https://huggingface.co/HuiziCao/SSoN-Qwen2.5-VL-7B-LoRA" target="_blank" rel="noopener" aria-disabled="false"><span class="button-symbol" aria-hidden="true">↓</span> Checkpoints</a>
+        <a class="button resource-link" data-resource="code" href="https://github.com/sson-benchmark/SSoN" target="_blank" rel="noopener" aria-disabled="false"><span class="button-symbol" aria-hidden="true">&lt;/&gt;</span> Code</a>
+      </div>
+      <div class="hero-statement">
+        <h2 data-letter-reveal>Four views. <em>One contradiction.</em></h2>
+        <p>Three images agree on one unchanged 3D scene. A fourth does not.<br class="desktop-break"> Can a vision-language model find it and explain why?</p>
+        <a class="text-link" href="#explore">Try the task yourself <span aria-hidden="true">↓</span></a>
+        <div class="motion-control"><button type="button" id="motion-toggle" aria-pressed="false" hidden>Pause motion</button></div>
+      </div>
+    </section>
+    </div>
+
+    <section class="teaser-section wrap" aria-label="Task overview and headline results">
+      <figure class="paper-figure" data-reveal>
+        <a class="image-open" href="assets/teaser.webp" target="_blank" rel="noopener" aria-label="Open the original teaser at full resolution"><img src="assets/teaser.webp" alt="Four views of a room illustrate a missing basketball. A chart compares six VLMs with human performance and separates True solve from Partly guessed answers." width="1800" height="945" fetchpriority="high"></a>
+        <figcaption>The same scene can look very different across cameras. SSoN asks which view cannot belong, and whether the explanation identifies a real contradiction.</figcaption>
+      </figure>
+      <div class="headline-stats" data-reveal aria-label="Main evaluation summary">
+        <div><strong>83.3<span>%</span></strong><span>Human accuracy</span></div>
+        <div><strong>39.7<span>%</span></strong><span>Best VLM accuracy</span></div>
+        <div><strong>34.9<span>%</span></strong><span>Best VLM True solve</span></div>
+      </div>
+      <p class="small-note centered">All three headline scores use the full 1,000-question benchmark. True solve requires a correct choice and a factual, sufficient explanation.</p>
+    </section>
+
+    <section class="section section-tinted" id="explore" aria-labelledby="explore-heading">
+      <div class="wrap">
+        <div class="section-heading" data-reveal><p class="eyebrow">See the challenge</p><h2 id="explore-heading">Which view breaks the shared scene?</h2><p>Explore one representative question for each edit type. Look across all four views, then select the inconsistent image.</p></div>
+        <div class="example-tabs" role="group" aria-label="Choose an edit example">
+          <button type="button" data-example="swap" aria-pressed="true">Swap</button><button type="button" data-example="move" aria-pressed="false">Move</button><button type="button" data-example="rotate" aria-pressed="false">Rotate</button><button type="button" data-example="mirror" aria-pressed="false">Mirror</button><button type="button" data-example="delete" aria-pressed="false">Delete</button><button type="button" data-example="detail" aria-pressed="false">Detail</button>
+        </div>
+        <div class="viewer-layout" data-reveal>
+          <div class="views-grid" id="views-grid" aria-label="Four question images">
+            <figure class="view-panel" data-view="A"><button class="view-choice" type="button" data-choice="A" aria-pressed="false"><span class="view-letter">A</span><img src="assets/examples/swap-A.webp" alt="View A of the swap example" width="1024" height="1024" loading="lazy"><span class="choice-status">Choose A</span></button><button type="button" class="expand-image" data-enlarge="A" aria-label="Enlarge view A">Enlarge <span aria-hidden="true">↗</span></button></figure>
+            <figure class="view-panel" data-view="B"><button class="view-choice" type="button" data-choice="B" aria-pressed="false"><span class="view-letter">B</span><img src="assets/examples/swap-B.webp" alt="View B of the swap example" width="1024" height="1024" loading="lazy"><span class="choice-status">Choose B</span></button><button type="button" class="expand-image" data-enlarge="B" aria-label="Enlarge view B">Enlarge <span aria-hidden="true">↗</span></button></figure>
+            <figure class="view-panel" data-view="C"><button class="view-choice" type="button" data-choice="C" aria-pressed="false"><span class="view-letter">C</span><img src="assets/examples/swap-C.webp" alt="View C of the swap example" width="1024" height="1024" loading="lazy"><span class="choice-status">Choose C</span></button><button type="button" class="expand-image" data-enlarge="C" aria-label="Enlarge view C">Enlarge <span aria-hidden="true">↗</span></button></figure>
+            <figure class="view-panel" data-view="D"><button class="view-choice" type="button" data-choice="D" aria-pressed="false"><span class="view-letter">D</span><img src="assets/examples/swap-D.webp" alt="View D of the swap example" width="1024" height="1024" loading="lazy"><span class="choice-status">Choose D</span></button><button type="button" class="expand-image" data-enlarge="D" aria-label="Enlarge view D">Enlarge <span aria-hidden="true">↗</span></button></figure>
+          </div>
+          <aside class="viewer-aside">
+            <p class="eyebrow" id="example-counter">Example 01 / 06</p>
+            <h3 id="example-title">The same objects, different places</h3>
+            <p class="viewer-instruction">Exactly one view shows an edited scene. The other three show the unchanged room from different cameras.</p>
+            <div class="selection-message" id="selection-message" aria-live="polite">Select A, B, C or D.</div>
+            <button class="button primary full-width" id="check-answer" type="button" disabled>Check answer</button>
+            <button class="quiet-button" id="reveal-answer" type="button">Show the explanation</button>
+            <div class="answer-panel" id="answer-panel" hidden aria-live="polite"></div>
+            <div class="example-navigation"><button class="quiet-button" id="previous-example" type="button">← Previous</button><button class="quiet-button" id="next-example" type="button">Next →</button></div>
+          </aside>
+        </div>
+        <p class="small-note">These examples come from the paper. Edit labels are shown here for exploration. In the standard evaluation, models receive neither the edit label nor a marked target. Your selections stay in this page and are not submitted.</p>
+        <noscript><p class="notice">Enable JavaScript to switch examples, select an answer and reveal the evidence. All research summaries below remain available without JavaScript.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section wrap" id="benchmark" aria-labelledby="benchmark-heading">
+      <div class="section-heading" data-reveal><p class="eyebrow">The benchmark</p><h2 id="benchmark-heading">A contradiction must be attributable.</h2><p>Finding two disagreeing images is not enough. With no trusted reference view and no marked target, the model must identify which view violates the scene supported by the others.</p></div>
+      <div class="benchmark-summary" data-reveal>
+        <div class="benchmark-counts"><div><strong>1,000</strong><span>questions</span></div><div><strong>4,000</strong><span>rendered views</span></div><div><strong>7</strong><span>scene sources</span></div><div><strong>6</strong><span>edit categories</span></div></div>
+      </div>
+      <figure class="diversity-figure" data-reveal aria-label="Dataset diversity">
+        <div class="diversity-scroll" tabindex="0" role="region" aria-label="Four diversity charts from the paper, scroll horizontally on smaller screens">
+          <a href="assets/diversity.svg" target="_blank" rel="noopener" aria-label="Open the four original diversity charts at full resolution"><img src="assets/diversity.svg" width="2200" height="825" loading="lazy" alt="The four original Figure 3(a) donut charts show scene sources, image resolution, edit categories and object size across 1,000 questions. Their original purple, green, blue, gold, pink and orange palette is preserved."></a>
+        </div>
+        <p class="small-note diversity-swipe">Scroll sideways to view all four charts, or tap the figure to open it at full size.</p>
+      </figure>
+      <div class="source-line"><span>iTHOR</span><span>ProcTHOR</span><span>RoboTHOR</span><span>3D-FRONT</span><span>Infinigen Indoors</span><span>SAGE-10k</span><span>TDW</span></div>
+      <p class="small-note">iTHOR and ProcTHOR are reported jointly for source counts because their room configurations and components overlap in the benchmark. RoboTHOR is reported separately.</p>
+      <div class="audit-intro" data-reveal><h3>Validity-guided constraint discovery</h3><p>Review of more than 10,000 development candidates turned failure cases into generation constraints. Each accepted item preserves diagnostic evidence in the intruder and at least two anchors while excluding tested 2D shortcuts.</p></div>
+      <ol class="audit-steps">
+        <li data-reveal><span class="step-number">01</span><h4>Check the scene and evidence</h4><p>Verify physical integrity, the recorded edit and clear visual evidence using the images, answer key and top-down views.</p></li>
+        <li data-reveal><span class="step-number">02</span><h4>Verify a unique answer</h4><p>A fresh reviewer first solves the four-image question without the key, records evidence and ambiguity, then checks for alternative answers.</p></li>
+        <li data-reveal><span class="step-number">03</span><h4>Reject visual shortcuts</h4><p>Exclude questions solvable through isolated appearance, object inventories or nearly aligned pixel comparisons.</p></li>
+      </ol>
+      <details class="figure-detail" data-reveal open><summary>View the construction overview from the paper <span aria-hidden="true">+</span></summary><div class="disclosure-panel"><a href="assets/framework_overview.webp" target="_blank" rel="noopener"><img src="assets/framework_overview.webp" alt="Original SSoN construction diagram showing scene edits, evidence requirements, validation and iterative constraint discovery." loading="lazy" width="2000" height="884"></a><p class="small-note">The overview summarizes the two validation objectives. The three human checks are described above.</p></div></details>
+    </section>
+
+    <section class="section section-tinted" id="results" aria-labelledby="results-heading">
+      <div class="wrap">
+        <div class="section-heading" data-reveal><p class="eyebrow">Full benchmark results</p><h2 id="results-heading">A wide gap remains.</h2><p>Six VLMs are evaluated on the same 1,000 questions. Switch between selecting the right view and supporting that selection with valid evidence.</p></div>
+        <div class="table-toolbar"><div class="segmented" role="group" aria-label="Result metric"><button type="button" data-metric="acc" aria-pressed="true">Answer accuracy</button><button type="button" data-metric="ts" aria-pressed="false">True solve</button></div><a class="download-link" href="data/main-results.csv" download>Download CSV ↓</a></div>
+        <p class="metric-definition" id="metric-definition">Answer accuracy is the percentage of questions with the correct final choice.</p>
+        <div class="table-scroll" data-reveal tabindex="0" role="region" aria-label="Scrollable model results table"><table class="results-table" id="main-results"><caption>Scores in percent. Each column uses all questions in that category as its denominator.</caption><thead><tr><th scope="col"><button type="button" data-sort="name">Model <span aria-hidden="true">↕</span></button></th><th scope="col" aria-sort="descending"><button type="button" data-sort="0">Overall <span aria-hidden="true">↓</span><small>1,000</small></button></th><th scope="col"><button type="button" data-sort="1">Swap <span aria-hidden="true">↕</span><small>101</small></button></th><th scope="col"><button type="button" data-sort="2">Move <span aria-hidden="true">↕</span><small>250</small></button></th><th scope="col"><button type="button" data-sort="3">Rotate <span aria-hidden="true">↕</span><small>346</small></button></th><th scope="col"><button type="button" data-sort="4">Mirror <span aria-hidden="true">↕</span><small>101</small></button></th><th scope="col"><button type="button" data-sort="5">Delete <span aria-hidden="true">↕</span><small>101</small></button></th><th scope="col"><button type="button" data-sort="6">Detail <span aria-hidden="true">↕</span><small>101</small></button></th></tr></thead><tbody id="results-body"><tr><th scope="row">GPT-6 Astra Pro</th><td class="overall best">39.70</td><td class="best">92.08</td><td class="best">27.20</td><td class="">7.23</td><td class="best">64.36</td><td class="best">61.39</td><td class="best">83.17</td></tr><tr><th scope="row">GPT-5.6 Sol Pro</th><td class="overall ">24.20</td><td class="">58.42</td><td class="">14.40</td><td class="">6.36</td><td class="">24.75</td><td class="">42.57</td><td class="">56.44</td></tr><tr><th scope="row">Gemini 3.5 Flash</th><td class="overall ">20.60</td><td class="">46.53</td><td class="">13.20</td><td class="best">9.54</td><td class="">19.80</td><td class="">30.69</td><td class="">41.58</td></tr><tr><th scope="row">Claude Fable 5</th><td class="overall ">19.30</td><td class="">39.60</td><td class="">14.00</td><td class="">5.20</td><td class="">24.75</td><td class="">31.68</td><td class="">42.57</td></tr><tr><th scope="row">Gemini 3.6 Flash</th><td class="overall ">18.70</td><td class="">34.65</td><td class="">16.00</td><td class="">5.78</td><td class="">23.76</td><td class="">29.70</td><td class="">37.62</td></tr><tr><th scope="row">Grok 4.5</th><td class="overall ">14.30</td><td class="">22.77</td><td class="">12.00</td><td class="">7.80</td><td class="">23.76</td><td class="">22.77</td><td class="">15.84</td></tr></tbody><tfoot id="results-reference"><tr><th scope="row">Human</th><td>83.30</td><td>97.03</td><td>71.60</td><td>76.01</td><td>95.05</td><td>98.02</td><td>97.03</td></tr><tr><th scope="row">Random choice</th><td>25.00</td><td>25.00</td><td>25.00</td><td>25.00</td><td>25.00</td><td>25.00</td><td>25.00</td></tr></tfoot></table></div>
+        <p class="small-note">Bold values mark the best VLM in each category. Human participants supplied one answer per question, yielding 833 correct choices. Human explanation scores were not measured. Seventeen non-generative vision encoders achieved 16.9% to 21.7% answer accuracy.</p>
+        <p class="results-takeaway"><strong>Rotation is particularly difficult.</strong> Even the best VLM answer accuracy in this category is 9.54%, compared with 76.01% for humans.</p>
+      </div>
+    </section>
+
+    <section class="section findings-section" id="findings" aria-labelledby="findings-heading">
+      <div class="wrap">
+        <div class="section-heading findings-heading" data-reveal><p class="eyebrow">What SSoN reveals</p><h2 id="findings-heading">Key findings</h2><p>Beyond the performance gap, three findings show where models struggle across views and what helps them improve.</p></div>
+        <div class="findings-list">
+          <details class="finding" data-reveal id="finding-evidence">
+            <summary>
+              <div class="finding-intro"><span class="finding-index" aria-hidden="true">01</span><div class="finding-copy"><span class="finding-scope">Six VLMs · 1,000 questions each</span><h3>Correct choices can hide unsupported explanations.</h3><p>404 of 1,368 correct selections lack sufficient valid evidence. True solve reveals what answer accuracy alone misses.</p></div><div class="finding-stat"><strong>29.5<span>%</span></strong><span>of correct selections<br>lack valid support</span></div></div>
+              <div class="finding-toggle"><span class="finding-toggle-label">Explore the evidence</span><span class="finding-plus" aria-hidden="true"></span></div>
+            </summary>
+            <div class="finding-panel"><div class="finding-inner">
+              <figure class="finding-chart" aria-labelledby="evidence-chart-title">
+                <div class="chart-heading"><div><p class="chart-kicker">Accuracy decomposed</p><h4 id="evidence-chart-title">Right answer. Right reason?</h4></div><div class="chart-legend"><span><i style="background:#83b6d1"></i>True solve</span><span><i style="background:#efc393"></i>Partly guessed</span></div></div>
+                <p class="chart-axis-title">Questions (%)</p>
+                <div class="chart-scroll" tabindex="0" role="region" aria-label="Chart, scroll horizontally on smaller screens"><div class="bar-chart chart-stacked" style="--columns:6"><div class="chart-yaxis" aria-hidden="true"><span>50</span><span>40</span><span>30</span><span>20</span><span>10</span><span>0</span></div><div class="chart-main" aria-hidden="true"><div class="chart-gridlines"><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="chart-columns"><div class="chart-group"><div class="bar-slot"><div class="bar-rise stacked-bar" style="height:79.4%;--i:0"><span class="bar-total">39.7</span><span class="bar-segment segment-supported" style="height:87.90931989924432%"><span>34.9</span></span><span class="bar-segment segment-unsupported" style="height:12.090680100755677%"></span></div></div><div class="bar-label">GPT-6<br>Astra Pro</div></div><div class="chart-group"><div class="bar-slot"><div class="bar-rise stacked-bar" style="height:48.4%;--i:1"><span class="bar-total">24.2</span><span class="bar-segment segment-supported" style="height:69.83471074380165%"><span>16.9</span></span><span class="bar-segment segment-unsupported" style="height:30.165289256198353%"></span></div></div><div class="bar-label">GPT-5.6<br>Sol Pro</div></div><div class="chart-group"><div class="bar-slot"><div class="bar-rise stacked-bar" style="height:41.2%;--i:2"><span class="bar-total">20.6</span><span class="bar-segment segment-supported" style="height:56.310679611650485%"><span>11.6</span></span><span class="bar-segment segment-unsupported" style="height:43.68932038834952%"></span></div></div><div class="bar-label">Gemini 3.5<br>Flash</div></div><div class="chart-group"><div class="bar-slot"><div class="bar-rise stacked-bar" style="height:38.6%;--i:3"><span class="bar-total">19.3</span><span class="bar-segment segment-supported" style="height:67.87564766839378%"><span>13.1</span></span><span class="bar-segment segment-unsupported" style="height:32.12435233160622%"></span></div></div><div class="bar-label">Claude<br>Fable 5</div></div><div class="chart-group"><div class="bar-slot"><div class="bar-rise stacked-bar" style="height:37.4%;--i:4"><span class="bar-total">18.7</span><span class="bar-segment segment-supported" style="height:63.63636363636363%"><span>11.9</span></span><span class="bar-segment segment-unsupported" style="height:36.36363636363636%"></span></div></div><div class="bar-label">Gemini 3.6<br>Flash</div></div><div class="chart-group"><div class="bar-slot"><div class="bar-rise stacked-bar" style="height:28.6%;--i:5"><span class="bar-total">14.3</span><span class="bar-segment segment-supported" style="height:55.94405594405594%"><span>8.0</span></span><span class="bar-segment segment-unsupported" style="height:44.05594405594406%"></span></div></div><div class="bar-label">Grok<br>4.5</div></div></div></div></div></div><table class="chart-data sr-only"><caption>Full benchmark explanation scores. Each model is evaluated on all 1,000 questions.</caption><thead><tr><th scope="col">Model</th><th scope="col">Answer accuracy (%)</th><th scope="col">True solve (%)</th><th scope="col">Partly guessed (%)</th></tr></thead><tbody><tr><th scope="row">GPT-6 Astra Pro</th><td>39.7</td><td>34.9</td><td>4.8</td></tr><tr><th scope="row">GPT-5.6 Sol Pro</th><td>24.2</td><td>16.9</td><td>7.3</td></tr><tr><th scope="row">Gemini 3.5 Flash</th><td>20.6</td><td>11.6</td><td>9.0</td></tr><tr><th scope="row">Claude Fable 5</th><td>19.3</td><td>13.1</td><td>6.2</td></tr><tr><th scope="row">Gemini 3.6 Flash</th><td>18.7</td><td>11.9</td><td>6.8</td></tr><tr><th scope="row">Grok 4.5</th><td>14.3</td><td>8.0</td><td>6.3</td></tr></tbody></table>
+                <figcaption>Each stacked bar shows answer accuracy. Its blue portion shows True solve. Both use all 1,000 questions per model as the denominator.</figcaption>
+              </figure>
+              <div class="finding-insights"><div><strong>964 supported selections</strong><p>A factual explanation must give sufficient evidence for the chosen view. A correct letter alone is not enough.</p></div><div><strong>404 unsupported selections</strong><p>Partly guessed includes fabricated changes and insufficient evidence. These cases are not all observed hallucinations.</p></div></div>
+              <div class="finding-method"><h4>Every correct response was reviewed by humans.</h4><p>Ten Claude Opus 5 reviewer seats assisted with explanation screening. Every correct-choice response received an independent, agent-blind human judgment followed by full evidence review. Final labels are human decisions.</p></div>
+              <a class="download-link" href="data/main-results.csv" download>Download the full benchmark results ↓</a>
+            </div></div>
+          </details>
+
+          <details class="finding" data-reveal id="finding-geometry">
+            <summary>
+              <div class="finding-intro"><span class="finding-index" aria-hidden="true">02</span><div class="finding-copy"><span class="finding-scope">100 fixed diagnostic questions</span><h3>Geometric support strengthens contradiction resolution.</h3><p>The reconstruction workflow improves accuracy by 23 points and True solve by 22. Supplied camera geometry achieves the highest scores.</p></div><div class="finding-stat"><strong>61<span>%</span></strong><span>accuracy with<br>camera geometry</span></div></div>
+              <div class="finding-toggle"><span class="finding-toggle-label">Explore the evidence</span><span class="finding-plus" aria-hidden="true"></span></div>
+            </summary>
+            <div class="finding-panel"><div class="finding-inner">
+              <figure class="finding-chart" aria-labelledby="geometry-chart-title">
+                <div class="chart-heading"><div><p class="chart-kicker">Prompting, reconstruction and geometry</p><h4 id="geometry-chart-title">What helps models find the contradiction?</h4></div><div class="chart-legend paired-legend"><span><i class="legend-solid"></i>Answer accuracy</span><span><i class="legend-soft"></i>True solve</span></div></div>
+                <p class="chart-axis-title">Questions (%)</p>
+                <div class="chart-scroll" tabindex="0" role="region" aria-label="Chart, scroll horizontally on smaller screens"><div class="bar-chart chart-interventions" style="--columns:7"><div class="chart-yaxis" aria-hidden="true"><span>80</span><span>60</span><span>40</span><span>20</span><span>0</span></div><div class="chart-main" aria-hidden="true"><div class="chart-gridlines"><span></span><span></span><span></span><span></span><span></span></div><div class="chart-columns"><div class="chart-group"><div class="bar-slot paired-slot" style="--bar-dark:#9ca8c3;--bar-light:#dce2ed"><div class="bar-rise paired-bar accuracy-bar" style="height:30.0%;--i:0"><span class="bar-total">24</span></div><div class="bar-rise paired-bar true-bar" style="height:15.0%;--i:0"><span class="bar-total">12</span></div></div><div class="bar-label">Base</div></div><div class="chart-group"><div class="bar-slot paired-slot" style="--bar-dark:#69b2cd;--bar-light:#c5e5ef"><div class="bar-rise paired-bar accuracy-bar" style="height:50.0%;--i:1"><span class="bar-total">40</span></div><div class="bar-rise paired-bar true-bar" style="height:28.749999999999996%;--i:1"><span class="bar-total">23</span></div></div><div class="bar-label">Comparison</div></div><div class="chart-group"><div class="bar-slot paired-slot" style="--bar-dark:#e4ab53;--bar-light:#f8e5bd"><div class="bar-rise paired-bar accuracy-bar" style="height:46.25%;--i:2"><span class="bar-total">37</span></div><div class="bar-rise paired-bar true-bar" style="height:36.25%;--i:2"><span class="bar-total">29</span></div></div><div class="bar-label">Scene<br>description</div></div><div class="chart-group"><div class="bar-slot paired-slot" style="--bar-dark:#ed938f;--bar-light:#f9d5d1"><div class="bar-rise paired-bar accuracy-bar" style="height:55.00000000000001%;--i:3"><span class="bar-total">44</span></div><div class="bar-rise paired-bar true-bar" style="height:40.0%;--i:3"><span class="bar-total">32</span></div></div><div class="bar-label">Edit<br>taxonomy</div></div><div class="chart-group"><div class="bar-slot paired-slot" style="--bar-dark:#aa91cf;--bar-light:#e1d6f1"><div class="bar-rise paired-bar accuracy-bar" style="height:60.0%;--i:4"><span class="bar-total">48</span></div><div class="bar-rise paired-bar true-bar" style="height:42.5%;--i:4"><span class="bar-total">34</span></div></div><div class="bar-label">Comparison<br>+ taxonomy</div></div><div class="chart-group"><div class="bar-slot paired-slot" style="--bar-dark:#d58ca9;--bar-light:#f1d4e0"><div class="bar-rise paired-bar accuracy-bar" style="height:58.75%;--i:5"><span class="bar-total">47</span></div><div class="bar-rise paired-bar true-bar" style="height:42.5%;--i:5"><span class="bar-total">34</span></div></div><div class="bar-label">Reconstruction</div></div><div class="chart-group"><div class="bar-slot paired-slot" style="--bar-dark:#68b6aa;--bar-light:#cbe8e0"><div class="bar-rise paired-bar accuracy-bar" style="height:76.25%;--i:6"><span class="bar-total">61</span></div><div class="bar-rise paired-bar true-bar" style="height:60.0%;--i:6"><span class="bar-total">48</span></div></div><div class="bar-label">Camera<br>geometry</div></div></div></div></div></div><table class="chart-data sr-only"><caption>Overall results on the fixed 100-question diagnostic set.</caption><thead><tr><th scope="col">Condition</th><th scope="col">Answer accuracy (%)</th><th scope="col">True solve (%)</th></tr></thead><tbody><tr><th scope="row">Base</th><td>24</td><td>12</td></tr><tr><th scope="row">Comparison</th><td>40</td><td>23</td></tr><tr><th scope="row">Scene description</th><td>37</td><td>29</td></tr><tr><th scope="row">Edit taxonomy</th><td>44</td><td>32</td></tr><tr><th scope="row">Comparison + taxonomy</th><td>48</td><td>34</td></tr><tr><th scope="row">Reconstruction</th><td>47</td><td>34</td></tr><tr><th scope="row">Camera geometry</th><td>61</td><td>48</td></tr></tbody></table>
+                <figcaption>Darker bars show answer accuracy and lighter bars show True solve. All conditions use the same selected 100 questions. Base reuses the original responses.</figcaption>
+              </figure>
+              <div class="finding-metrics"><div><strong>+23 <small>points</small></strong><span>Reconstruction accuracy<br>over Base</span></div><div><strong>+22 <small>points</small></strong><span>Reconstruction True solve<br>over Base</span></div><div><strong>20 → 70<span>%</span></strong><span>Move accuracy and True solve<br>with camera geometry</span></div></div>
+              <div class="finding-insights"><div><strong>Camera geometry helps displacement judgments.</strong><p>Adding calibration to comparison prompting raises both move scores from 20% to 70%. All 14 correct move selections have valid support.</p></div><div><strong>Rotation remains difficult.</strong><p>Even with camera geometry, rotation reaches 38.89% accuracy and 22.22% True solve. Reconstruction yields only two move and one rotate True solve responses.</p></div></div>
+              <div class="finding-method"><h4>What each condition adds</h4><div class="condition-guide"><p><b>Comparison</b> aligns landmarks, instances, expected visibility and corroborating views.</p><p><b>Scene description</b> adds a written account of the 3D arrangement before deciding.</p><p><b>Edit taxonomy</b> supplies all six possible edit categories without revealing the current edit.</p><p><b>Comparison + taxonomy</b> combines the comparison strategy and category knowledge.</p><p><b>Reconstruction</b> executes and inspects a sparse spatial 3D reconstruction without supplied geometry.</p><p><b>Camera geometry</b> adds camera intrinsics, extrinsics and image dimensions to comparison prompting.</p></div></div>
+              <div class="finding-method"><h4>A deliberately selected diagnostic set</h4><p>The set contains exactly 12 original True solve responses, 12 original Partly guessed responses and 76 wrong responses from Astra Pro. True solve and Partly guessed counts match within each edit category. Every category contributes at least 12 questions and all seven sources are represented.</p><p>Base reuses the original responses. Other conditions are new runs. These comparisons describe the selected diagnostic set rather than an average improvement over the full benchmark.</p><p>Recon uses GPT-6 Astra at the highest of six available reasoning-effort settings. Humans verify the executed spatial reconstruction, reconstructed camera views and its use in reasoning. Runs lacking execution or required evidence were repeated. The first compliant response was retained regardless of correctness. The reported gains compare the complete reconstruction workflow with Base.</p></div>
+              <a class="download-link" href="data/intervention-results.csv" download>Download the intervention results ↓</a>
+            </div></div>
+          </details>
+
+          <details class="finding" data-reveal id="finding-supervision">
+            <summary>
+              <div class="finding-intro"><span class="finding-index" aria-hidden="true">03</span><div class="finding-copy"><span class="finding-scope">Qwen2.5-VL-7B · 201 held-out questions · Unseen rooms</span><h3>Targeted supervision improves performance on unseen rooms.</h3><p>Accuracy rises from 21.89% to 33.33% with answer supervision and 41.79% with rationale and answer supervision.</p></div><div class="finding-stat"><strong>+19.90</strong><span>accuracy points<br>over zero-shot</span></div></div>
+              <div class="finding-toggle"><span class="finding-toggle-label">Explore the evidence</span><span class="finding-plus" aria-hidden="true"></span></div>
+            </summary>
+            <div class="finding-panel"><div class="finding-inner">
+              <figure class="finding-chart" aria-labelledby="supervision-chart-title">
+                <div class="chart-heading"><div><p class="chart-kicker">Qwen2.5-VL-7B-Instruct</p><h4 id="supervision-chart-title">Learning to identify the contradiction</h4></div><span class="chart-badge">201 held-out questions</span></div>
+                <p class="chart-axis-title">Answer accuracy (%)</p>
+                <div class="chart-scroll" tabindex="0" role="region" aria-label="Chart, scroll horizontally on smaller screens"><div class="bar-chart chart-training" style="--columns:3"><div class="chart-yaxis" aria-hidden="true"><span>60</span><span>40</span><span>20</span><span>0</span></div><div class="chart-main" aria-hidden="true"><div class="chart-gridlines"><span></span><span></span><span></span><span></span></div><div class="chart-columns"><div class="chart-group"><div class="bar-slot"><div class="bar-rise training-column" style="height:36.483333333333334%;background:#b1bfd8;--i:0"><span class="bar-total">21.89</span></div></div><div class="bar-label">Zero-shot<small>44 / 201 correct</small></div></div><div class="chart-group"><div class="bar-slot"><div class="bar-rise training-column" style="height:55.55%;background:#efb79c;--i:1"><span class="bar-total">33.33</span></div></div><div class="bar-label">Answer<br>supervision<small>67 / 201 correct</small></div></div><div class="chart-group"><div class="bar-slot"><div class="bar-rise training-column" style="height:69.65%;background:#b5a2d7;--i:2"><span class="bar-total">41.79</span></div></div><div class="bar-label">Rationale + answer<br>supervision<small>84 / 201 correct</small></div></div></div></div></div></div><table class="chart-data sr-only"><caption>Fine-tuning results on 201 held-out questions from unseen rooms.</caption><thead><tr><th scope="col">Supervision</th><th scope="col">Accuracy (%)</th><th scope="col">Correct</th><th scope="col">95% Wilson confidence interval</th></tr></thead><tbody><tr><th scope="row">Zero-shot</th><td>21.89</td><td>44 / 201</td><td>[16.7, 28.1]</td></tr><tr><th scope="row">Answer supervision</th><td>33.33</td><td>67 / 201</td><td>[27.2, 40.1]</td></tr><tr><th scope="row">Rationale + answer supervision</th><td>41.79</td><td>84 / 201</td><td>[35.2, 48.7]</td></tr></tbody></table>
+                <figcaption>95% Wilson confidence intervals are [16.7, 28.1] for zero-shot, [27.2, 40.1] for answer supervision and [35.2, 48.7] for rationale and answer supervision.</figcaption>
+              </figure>
+              <div class="finding-insights"><div><strong>Gains transfer to unseen rooms.</strong><p>The 700 / 99 / 201 training, validation and test split keeps related rooms and scene families together. Both training conditions improve over the zero-shot baseline.</p></div><div><strong>Rationale gains concentrate in rotation.</strong><p>Rotation accuracy rises from 32.84% to 58.21% over answer supervision. Its 17 additional correct answers equal the net gain across all 201 test questions.</p></div></div>
+              <div class="finding-method"><h4>How to read the additional rationale gain</h4><p>The extra 8.46-point gain over answer supervision remains suggestive, with an exact paired McNemar p value of 0.064 and one training seed per condition.</p></div>
+            </div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" aria-labelledby="abstract-heading"><div class="abstract-layout" data-reveal><p class="eyebrow">The paper</p><div><h2 id="abstract-heading">Abstract</h2><div class="abstract-text" id="abstract-text"><p>Spatial intelligence, the capacity to represent and reason about physical space, underlies embodied perception and real-world visual understanding. Existing benchmarks probe it through spatial relations, perspective-taking, and mental modeling. What remains underexamined is whether a model can maintain a coherent scene representation across views, since pairwise comparison alone cannot reveal which view departs from the truth. We thus introduce Same Space or Not (SSoN), a benchmark of cross-view contradiction resolution comprising 1,000 questions from seven indoor scene sources and six categories of controlled 3D edits. Each question presents three views of an unchanged scene and one view of an edited variant. Models must identify the inconsistent view and explain the contradiction without a designated trusted reference or a marked target. Our construction process iteratively translates human review into generation constraints. Automated checks and exhaustive human validation screen out both trivial visual shortcuts and questions lacking sufficient evidence for a unique answer. Humans achieve 83.3% accuracy, compared with 39.7% for the strongest vision-language models (VLMs), which further drops to 34.9% when requiring valid visual explanation for the correct selection. We investigate prompting, camera information, and 3D reconstruction as routes for improvement. On a 100-question intervention set with a 24% baseline, prompting and 3D reconstruction remain below 50% answer accuracy, except when ground-truth camera information is supplied, which reaches 61% answer accuracy but only 48% True solve accuracy. On a held-out 201-question test set, Qwen2.5-VL-7B achieves 21.89% accuracy, 33.33% after answer-only fine-tuning, and 41.79% after fine-tuning with both rationale and answer supervision. These results identify cross-view contradiction resolution as a substantial weakness of current VLMs that can be partly addressed by targeted supervision. The 1,000 questions and fine-tuned checkpoints will be made public.</p></div></div></div></section>
+
+    <section class="section wrap citation-section" id="citation" aria-labelledby="citation-heading">
+      <div class="citation-heading" data-reveal><div><p class="eyebrow">Reference</p><h2 id="citation-heading">Cite this work</h2></div></div>
+      <p class="citation-placeholder">Coming soon.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap"><a class="brand" href="#top"><img src="assets/logo.png" alt="" width="36" height="30"><span>Same Space or Not</span></a><p>Spatial intelligence across views.</p><a href="https://github.com/sson-benchmark/sson-benchmark.github.io" target="_blank" rel="noopener">Website source ↗</a></footer>
+
+  <dialog id="image-dialog" aria-label="Enlarged question image"><div class="dialog-top"><strong id="dialog-label">View A</strong><button class="button" id="close-dialog" type="button">Close ×</button></div><img id="dialog-image" alt="Enlarged question view"></dialog>
+</body>
+</html>

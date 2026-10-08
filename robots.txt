@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sson-benchmark.github.io/sitemap.xml

@@ -1,0 +1,467 @@
+window.SSON_DATA = {
+  "categories": [
+    "Overall",
+    "Swap",
+    "Move",
+    "Rotate",
+    "Mirror",
+    "Delete",
+    "Detail"
+  ],
+  "counts": [
+    1000,
+    101,
+    250,
+    346,
+    101,
+    101,
+    101
+  ],
+  "models": [
+    {
+      "name": "GPT-6 Astra Pro",
+      "acc": [
+        39.7,
+        92.08,
+        27.2,
+        7.23,
+        64.36,
+        61.39,
+        83.17
+      ],
+      "ts": [
+        34.9,
+        85.15,
+        20.4,
+        5.2,
+        56.44,
+        57.43,
+        78.22
+      ]
+    },
+    {
+      "name": "GPT-5.6 Sol Pro",
+      "acc": [
+        24.2,
+        58.42,
+        14.4,
+        6.36,
+        24.75,
+        42.57,
+        56.44
+      ],
+      "ts": [
+        16.9,
+        55.45,
+        4.0,
+        1.16,
+        15.84,
+        31.68,
+        50.5
+      ]
+    },
+    {
+      "name": "Gemini 3.5 Flash",
+      "acc": [
+        20.6,
+        46.53,
+        13.2,
+        9.54,
+        19.8,
+        30.69,
+        41.58
+      ],
+      "ts": [
+        11.6,
+        37.62,
+        2.0,
+        1.16,
+        11.88,
+        20.79,
+        35.64
+      ]
+    },
+    {
+      "name": "Claude Fable 5",
+      "acc": [
+        19.3,
+        39.6,
+        14.0,
+        5.2,
+        24.75,
+        31.68,
+        42.57
+      ],
+      "ts": [
+        13.1,
+        31.68,
+        7.2,
+        0.29,
+        18.81,
+        23.76,
+        36.63
+      ]
+    },
+    {
+      "name": "Gemini 3.6 Flash",
+      "acc": [
+        18.7,
+        34.65,
+        16.0,
+        5.78,
+        23.76,
+        29.7,
+        37.62
+      ],
+      "ts": [
+        11.9,
+        33.66,
+        3.2,
+        1.45,
+        19.8,
+        23.76,
+        27.72
+      ]
+    },
+    {
+      "name": "Grok 4.5",
+      "acc": [
+        14.3,
+        22.77,
+        12.0,
+        7.8,
+        23.76,
+        22.77,
+        15.84
+      ],
+      "ts": [
+        8.0,
+        19.8,
+        3.2,
+        3.18,
+        13.86,
+        15.84,
+        10.89
+      ]
+    }
+  ],
+  "human": [
+    83.3,
+    97.03,
+    71.6,
+    76.01,
+    95.05,
+    98.02,
+    97.03
+  ],
+  "interventions": [
+    {
+      "key": "Base",
+      "name": "Original responses",
+      "acc": [
+        24.0,
+        66.67,
+        10.0,
+        11.11,
+        13.33,
+        16.67,
+        23.53
+      ],
+      "ts": [
+        12.0,
+        33.33,
+        5.0,
+        5.56,
+        6.67,
+        8.33,
+        11.76
+      ]
+    },
+    {
+      "key": "Comp",
+      "name": "Comparison strategy",
+      "acc": [
+        40.0,
+        77.78,
+        20.0,
+        16.67,
+        40.0,
+        25.0,
+        58.82
+      ],
+      "ts": [
+        23.0,
+        55.56,
+        20.0,
+        0.0,
+        13.33,
+        8.33,
+        35.29
+      ]
+    },
+    {
+      "key": "Scene",
+      "name": "Scene description",
+      "acc": [
+        37.0,
+        72.22,
+        20.0,
+        22.22,
+        33.33,
+        25.0,
+        47.06
+      ],
+      "ts": [
+        29.0,
+        66.67,
+        20.0,
+        11.11,
+        20.0,
+        25.0,
+        29.41
+      ]
+    },
+    {
+      "key": "Tax",
+      "name": "Edit taxonomy",
+      "acc": [
+        44.0,
+        72.22,
+        30.0,
+        16.67,
+        66.67,
+        66.67,
+        23.53
+      ],
+      "ts": [
+        32.0,
+        61.11,
+        25.0,
+        11.11,
+        53.33,
+        33.33,
+        11.76
+      ]
+    },
+    {
+      "key": "Comp+Tax",
+      "name": "Comparison + taxonomy",
+      "acc": [
+        48.0,
+        77.78,
+        25.0,
+        22.22,
+        66.67,
+        75.0,
+        35.29
+      ],
+      "ts": [
+        34.0,
+        61.11,
+        15.0,
+        5.56,
+        53.33,
+        50.0,
+        29.41
+      ]
+    },
+    {
+      "key": "Recon",
+      "name": "3D reconstruction",
+      "acc": [
+        47.0,
+        77.78,
+        15.0,
+        16.67,
+        46.67,
+        75.0,
+        64.71
+      ],
+      "ts": [
+        34.0,
+        66.67,
+        10.0,
+        5.56,
+        40.0,
+        50.0,
+        41.18
+      ]
+    },
+    {
+      "key": "Cam",
+      "name": "Camera calibration",
+      "acc": [
+        61.0,
+        66.67,
+        70.0,
+        38.89,
+        40.0,
+        75.0,
+        76.47
+      ],
+      "ts": [
+        48.0,
+        61.11,
+        70.0,
+        22.22,
+        20.0,
+        58.33,
+        52.94
+      ]
+    }
+  ],
+  "interventionCounts": [
+    100,
+    18,
+    20,
+    18,
+    15,
+    12,
+    17
+  ],
+  "examples": [
+    {
+      "id": "swap",
+      "category": "Swap",
+      "answer": "D",
+      "title": "The same objects, different places",
+      "explanation": "The clock and phone exchange positions in D. A shows the phone on the desk side and B shows the clock on the bed side. The desk, nightstand and bed establish the shared scene. C reveals a bear and racket from a different viewpoint without changing the scene.",
+      "evidence": [
+        "A locates the phone beside the desk.",
+        "B locates the clock on the bed side.",
+        "D exchanges the two positions."
+      ],
+      "n": 101,
+      "images": [
+        "assets/examples/swap-A.webp",
+        "assets/examples/swap-B.webp",
+        "assets/examples/swap-C.webp",
+        "assets/examples/swap-D.webp"
+      ]
+    },
+    {
+      "id": "move",
+      "category": "Move",
+      "answer": "C",
+      "title": "Position is more than screen location",
+      "explanation": "The laptop in C has shifted toward the end of the desk. The red card and lamp provide fixed references. A, B and D show different appearances and partial views of the laptop at its unchanged location.",
+      "evidence": [
+        "Match the laptop using the red card and lamp.",
+        "Compare its distance to the desk end.",
+        "C shows the displaced position and slight overhang."
+      ],
+      "n": 250,
+      "images": [
+        "assets/examples/move-A.webp",
+        "assets/examples/move-B.webp",
+        "assets/examples/move-C.webp",
+        "assets/examples/move-D.webp"
+      ]
+    },
+    {
+      "id": "rotate",
+      "category": "Rotate",
+      "answer": "A",
+      "title": "Find the same chair, then its orientation",
+      "explanation": "A shows a chair rotated in place by 60 degrees. Its seat turns away from the table toward the open floor. In B, C and D the same chair faces the table. Room position identifies the correct instance among three identical chairs.",
+      "evidence": [
+        "Match the chair by its position in the room.",
+        "Use the table as a stable reference.",
+        "A changes the chair orientation."
+      ],
+      "n": 346,
+      "images": [
+        "assets/examples/rotate-A.webp",
+        "assets/examples/rotate-B.webp",
+        "assets/examples/rotate-C.webp",
+        "assets/examples/rotate-D.webp"
+      ]
+    },
+    {
+      "id": "mirror",
+      "category": "Mirror",
+      "answer": "B",
+      "title": "Viewpoint changes do not reverse handedness",
+      "explanation": "B shows the mirrored scene. After aligning the sofa orientation using room landmarks, its extension lies on the seated left. A, C and D retain the extension on the seated right. Screen-left and screen-right alone cannot establish this distinction.",
+      "evidence": [
+        "Establish the sofa facing direction.",
+        "Compare the extension in the seated coordinate frame.",
+        "B reverses its handedness."
+      ],
+      "n": 101,
+      "images": [
+        "assets/examples/mirror-A.webp",
+        "assets/examples/mirror-B.webp",
+        "assets/examples/mirror-C.webp",
+        "assets/examples/mirror-D.webp"
+      ]
+    },
+    {
+      "id": "delete",
+      "category": "Delete",
+      "answer": "D",
+      "title": "Missing is different from hidden",
+      "explanation": "The dark glass is absent in D even though its expected location beside the vase is visible. Fixed cutlery identifies the corresponding place setting across views. C instead occludes the pale glass while retaining the dark glass.",
+      "evidence": [
+        "Match the place setting using the cutlery.",
+        "Check whether the expected location is visible.",
+        "D lacks the dark glass at that visible location."
+      ],
+      "n": 101,
+      "images": [
+        "assets/examples/delete-A.webp",
+        "assets/examples/delete-B.webp",
+        "assets/examples/delete-C.webp",
+        "assets/examples/delete-D.webp"
+      ]
+    },
+    {
+      "id": "detail",
+      "category": "Detail",
+      "answer": "D",
+      "title": "One location, a different shape",
+      "explanation": "The silver kettle in D has a curved body and pointed lid. B and C show the original straight-sided form with a flat lid at the same stove position. In A the silver kettle is outside the frame, while the blue kettle remains visible.",
+      "evidence": [
+        "Use the blue kettle to establish correspondence.",
+        "B and C show the original silver kettle geometry.",
+        "D changes the shape at the same stove position."
+      ],
+      "n": 101,
+      "images": [
+        "assets/examples/detail-A.webp",
+        "assets/examples/detail-B.webp",
+        "assets/examples/detail-C.webp",
+        "assets/examples/detail-D.webp"
+      ]
+    }
+  ],
+  "fineTune": [
+    {
+      "name": "Zero-shot",
+      "acc": 21.89,
+      "correct": 44,
+      "ci": [
+        16.7,
+        28.1
+      ]
+    },
+    {
+      "name": "Answer supervision",
+      "acc": 33.33,
+      "correct": 67,
+      "ci": [
+        27.2,
+        40.1
+      ]
+    },
+    {
+      "name": "Rationale + answer supervision",
+      "acc": 41.79,
+      "correct": 84,
+      "ci": [
+        35.2,
+        48.7
+      ]
+    }
+  ]
+};

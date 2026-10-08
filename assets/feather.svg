@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 132" fill="none">
+  <defs>
+    <linearGradient id="pearl-feather" x1="13" y1="25" x2="44" y2="102" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffdf8"/>
+      <stop offset=".5" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#dfd6c8"/>
+    </linearGradient>
+  </defs>
+  <path d="M30 112C14 106 7 85 12 63C17 39 32 16 42 5C38 23 45 40 46 59C47 81 40 101 30 112Z" fill="url(#pearl-feather)" stroke="#bead8a" stroke-opacity=".63" stroke-width=".8"/>
+  <path d="M25 125C29 104 35 76 38 52C41 31 41 17 42 5" stroke="#bead8a" stroke-opacity=".66" stroke-width=".8" stroke-linecap="round"/>
+  <g stroke="#bead8a" stroke-opacity=".32" stroke-width=".55" stroke-linecap="round">
+    <path d="M30 102L16 87M32 92L12 72M34 81L15 56M36 69L20 41M37 57L28 26"/>
+    <path d="M31 98L42 83M34 84L45 64M36 70L44 48M38 54L42 34"/>
+  </g>
+</svg>
