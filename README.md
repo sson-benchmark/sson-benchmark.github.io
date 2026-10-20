@@ -4,7 +4,7 @@ Project website for **Same Space or Not (SSoN)**, a benchmark for spatial intell
 
 [Homepage](http://sson.aisexam.com/) · [Code](https://github.com/sson-benchmark/SSoN) · [Dataset](https://huggingface.co/datasets/HuiziCao/SSoN) · [Checkpoints](https://huggingface.co/HuiziCao/SSoN-Qwen2.5-VL-7B-LoRA)
 
-**Paper (arXiv):** Coming soon.
+**Paper (arXiv):** [Same Space or Not: Benchmarking Spatial Intelligence Through Cross-View Contradictions](https://arxiv.org/abs/2610.23959)
 
 ## About
 
